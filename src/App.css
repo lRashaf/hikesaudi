@@ -1,0 +1,550 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+/* Reset default link styles */
+a {
+  color: inherit; /* الوراثة من الألوان الحالية */
+  text-decoration: none; /* إزالة الخط */
+}
+
+a:hover {
+  color: #e63946; /* اللون الأحمر عند التحويم */
+  text-decoration: underline; /* خط عند التحويم إذا أردت */
+}
+
+.App {
+  text-align: center;
+}
+
+/* Header Styles */
+.header {
+  background: #fff;
+  padding: 20px 40px; /* Increased padding for a more spacious header */
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2em; /* Larger logo size */
+  font-weight: bold;
+  color: #e63946;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* Increased spacing between links */
+}
+
+.nav-links li {
+  cursor: pointer;
+  font-size: 1.1em; /* Slightly larger font for better readability */
+  font-weight: 500;
+  transition: color 0.3s; /* Smooth transition for hover */
+}
+
+.nav-links li:hover, .nav-links li:active {
+  color: #e63946; /* Change color to red on hover or active */
+}
+
+.auth-buttons button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for buttons */
+}
+
+.sign-in {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.sign-in:active {
+  background: #e63946; /* Change background to red when clicked */
+  color: white;
+}
+
+.join-now {
+  background: #e63946;
+  color: white;
+}
+
+.join-now:active {
+  background: #c12e3c; /* Darker red on click */
+}
+/* Hero Section */
+.hero {
+  position: relative; /* Position for stacking elements */
+  display: flex;
+  justify-content: space-between;
+  height: 60vh;
+  align-items: center;
+  padding: 80px 50px;
+  overflow: hidden; /* Hide overflowing content */
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.068); /* Semi-transparent white overlay */
+  z-index: 1;
+}
+
+.hero-video {
+  position: absolute; /* Make the video a background */
+  top: 0;
+  left: 0;
+  width: 100%; /* Make it cover the full section */
+  height: 100%; /* Make it cover the full section */
+  object-fit: cover; /* Cover the area without distortion */
+  z-index: -1; /* Push video to the back */
+}
+.hero-content {
+  position: relative; /* Ensure content is above the overlay */
+  color: #FFFFFF;
+  z-index: 2; /* Ensure content is above video and overlay */
+  text-align: left;
+  max-width: 600px; /* Limit width for better text alignment */
+  margin-left: 100px; /* Add spacing from the left */
+}
+
+.hero-image {
+  position: relative;
+  z-index: 2; /* Ensure image is above video */
+}
+
+.hero-content h1 {
+  font-size: 3.5em;
+  margin: 0 0 20px 0;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.hero-buttons button {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.explore {
+  background: #e63946;
+  color: white;
+}
+
+.watch-guide {
+  background: white; /* White background for the second button */
+  border: 2px solid #e63946; /* Red border */
+  color: #e63946; /* Red text color */
+}
+
+
+/* Popular Trails Section */
+.popular-trails {
+  padding: 50px;
+  background: #fff;
+}
+
+.popular-trails h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.trail-cards {
+  display: flex;
+  justify-content: center;
+  gap: 5px; /* Reduced gap to make them closer */
+  flex-wrap: wrap;
+}
+
+
+.trail-card {
+  background: #FFFFFF; /* White background */
+  border-radius: 12px; /* Rounded corners */
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 10px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  flex: 1;
+  max-width: 340px; /* Increased width for uniform cards */
+  height: 380px; /* Adjusted height for better alignment */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.trail-card:hover {
+  transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+.trail-card img {
+  max-width: 100%;
+  border-radius: 5px;
+  height: 180px; /* Adjusted height for the image */
+  object-fit: cover;
+}
+
+/* Subscription Plans Section */
+.subscription-plans {
+  padding: 50px;
+  background: #4a4a4a; /* Darker background */
+  text-align: center; /* Center align text */
+}
+
+.subscription-plans h2 {
+  font-size: 2.5em;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.subscription-plans p {
+  font-size: 1.2em;
+  color: #d3d3d3;
+  margin-bottom: 40px;
+}
+
+.plans {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.plan {
+  background: #fff;
+  border-radius: 12px; /* Rounded corners */
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 10px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 300px; /* Set card width */
+  flex: 1;
+  transition: transform 0.3s; /* Smooth scaling */
+}
+
+.plan:hover {
+  transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+.plan h3 {
+  font-size: 1.8em;
+  color: #e63946;
+  margin-bottom: 10px;
+}
+
+.plan p {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.plan span {
+  font-size: 0.9em;
+  color: #777;
+}
+
+.plan ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.plan li {
+  margin: 10px 0;
+  font-size: 1em;
+  color: #333;
+}
+
+.plan button {
+  padding: 10px 20px;
+  background: transparent;
+  color: #e63946;
+  border: 2px solid #e63946;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.plan button:hover {
+  background: #e63946;
+  color: #fff;
+}
+
+/* Footer Section */
+.footer {
+  background: #ffffff; /* Set white background */
+  color: #333; /* Dark text color */
+  padding: 40px 20px; /* Adjust padding */
+  border-top: 1px solid #ddd;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Split into four columns */
+  gap: 20px;
+  max-width: 1200px; /* Limit footer width */
+  margin: 0 auto; /* Center align */
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column; /* Stack logo and description vertically */
+  align-items: flex-start;
+}
+
+.footer-logo h2 {
+  font-size: 1.8em; /* Larger logo size */
+  font-weight: bold;
+  color: #e63946;
+  margin: 0;
+}
+
+.footer-logo p {
+  margin: 5px 0 0 0; /* Ensure description is close to logo */
+  font-size: 1em;
+  color: #555;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+
+.social-media ul {
+  list-style: none;
+  display: flex;
+  gap: 15px; /* Add spacing between icons */
+  padding: 0;
+  margin-top: 10px;
+}
+
+.social-media a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+
+.social-media a:hover {
+  color: #e63946; /* Highlight color */
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.newsletter input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  flex: 1;
+  font-size: 0.9em;
+  width: 100%; /* Full width */
+}
+
+.newsletter button {
+  padding: 10px 20px;
+  background: #e63946;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.newsletter button:hover {
+  background: #c12e3c; /* Darker red */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #777;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    height: 50vh;
+  }
+
+  .plans,
+  .trail-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero {
+    height: 40vh;
+  }
+
+  .hero-content h1 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 10px;
+  }
+
+  .hero {
+    height: 30vh;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5em;
+  }
+
+  .plans,
+  .trail-cards {
+    gap: 10px;
+  }
+
+  .plan {
+    width: 90%;
+  }
+}
+/* Responsive Styles for Tablets */
+@media screen and (max-width: 1024px) {
+  .navbar {
+    flex-direction: column; /* ترتيب الـ Navbar عمودي */
+    gap: 10px; /* تباعد بين العناصر */
+  }
+
+  .hero-content {
+    text-align: center; /* توسيط النص */
+    margin-left: 0; /* إزالة الهامش من اليسار */
+  }
+
+  .trail-cards {
+    flex-direction: column; /* عرض الكروت بشكل عمودي */
+    align-items: center;
+  }
+
+  .plan {
+    max-width: 80%; /* تقليل عرض الكروت */
+  }
+}
+
+/* Responsive Styles for Mobile */
+@media screen and (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5em; /* تقليل حجم العنوان */
+  }
+
+  .hero-buttons {
+    flex-direction: column; /* عرض الأزرار بشكل عمودي */
+    gap: 10px; /* تباعد بين الأزرار */
+  }
+
+  .trail-cards {
+    gap: 20px; /* زيادة التباعد بين الكروت */
+  }
+
+  .trail-card {
+    width: 100%; /* جعل الكرت يأخذ عرض الشاشة بالكامل */
+    height: auto; /* ضبط الارتفاع تلقائيًا */
+  }
+
+  .plans {
+    flex-direction: column; /* ترتيب الباقات عمودي */
+  }
+
+  .plan {
+    width: 90%; /* تقليل عرض كل باقة */
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr; /* جعل الفوتر عمودي */
+    text-align: center;
+  }
+
+  .footer-logo,
+  .footer-links,
+  .social-media,
+  .newsletter {
+    align-items: center; /* توسيط المحتوى */
+  }
+}
+/* Responsive Header for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 10px 20px; /* تقليل التباعد */
+  }
+
+  .navbar {
+    flex-direction: column; /* ترتيب العناصر بشكل عمودي */
+    align-items: center; /* توسيط العناصر */
+    gap: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column; /* عرض الروابط تحت بعض */
+    text-align: center;
+    gap: 10px;
+  }
+
+  .auth-buttons {
+    flex-direction: column; /* ترتيب الأزرار عمودي */
+    gap: 10px;
+  }
+}

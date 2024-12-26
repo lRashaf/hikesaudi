@@ -1,0 +1,149 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+  color: #4F4F4F;
+}
+
+/* Main Container */
+.contact-us-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Header Section */
+.contact-header {
+  text-align: center;
+}
+
+.contact-header h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #4F4F4F;
+}
+
+.contact-header p {
+  font-size: 16px;
+  color: #4B5563;
+  margin-top: 10px;
+}
+
+/* Content Section */
+.contact-content {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.contact-form,
+.contact-info {
+  background: #FFFFFF;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+  flex: 1;
+}
+
+/* Contact Form */
+.contact-form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #DC2828;
+  color: #FFFFFF;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #B71C1C;
+}
+
+/* Contact Info */
+.contact-info h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-info p i {
+  color: #DC2828;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #DC2828;
+  color: #FFFFFF;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.social-icons a:hover {
+  background-color: #B71C1C;
+}
+
+/* Footer */
+footer {
+  margin-top: 50px;
+  text-align: center;
+  color: #4B5563;
+  font-size: 14px;
+}
+
+footer p {
+  margin: 10px 0;
+}

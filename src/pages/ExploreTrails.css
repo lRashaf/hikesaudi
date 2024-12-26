@@ -1,0 +1,259 @@
+.explore-trails {
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .hero-section {
+    position: relative;
+    height: 60vh !important;
+    overflow: hidden;
+  }
+  
+  .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2; /* أقل من الـ hero-overlay */
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white;
+    max-width: 600px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 1.1em;
+  }
+  
+  .popular-trails {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .popular-trails h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+  }
+  
+  .trail-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .trail-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .trail-card img {
+    width: 100%;
+    border-radius: 8px;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .trail-card h3 {
+    margin: 15px 0 10px;
+  }
+  
+  .trail-card p {
+    color: #888;
+    font-size: 0.9em;
+  }
+  
+  .trail-card button {
+    background: #e63946;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .pagination {
+    margin-top: 30px;
+  }
+  
+  .pagination button {
+    background: #fff;
+    border: 1px solid #e63946;
+    color: #e63946;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .pagination button.active,
+  .pagination button:hover {
+    background: #e63946;
+    color: white;
+  }
+  
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    height: 50vh;
+  }
+
+  .plans,
+  .trail-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero {
+    height: 40vh;
+  }
+
+  .hero-content h1 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 10px;
+  }
+
+  .hero {
+    height: 30vh;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5em;
+  }
+
+  .plans,
+  .trail-cards {
+    gap: 10px;
+  }
+
+  .plan {
+    width: 90%;
+  }
+}
+/* Responsive Styles for Tablets */
+@media screen and (max-width: 1024px) {
+  .navbar {
+    flex-direction: column; /* ترتيب الـ Navbar عمودي */
+    gap: 10px; /* تباعد بين العناصر */
+  }
+
+  .hero-content {
+    text-align: center; /* توسيط النص */
+    margin-left: 0; /* إزالة الهامش من اليسار */
+  }
+
+  .trail-cards {
+    flex-direction: column; /* عرض الكروت بشكل عمودي */
+    align-items: center;
+  }
+
+  .plan {
+    max-width: 80%; /* تقليل عرض الكروت */
+  }
+}
+
+/* Responsive Styles for Mobile */
+@media screen and (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5em; /* تقليل حجم العنوان */
+  }
+
+  .hero-buttons {
+    flex-direction: column; /* عرض الأزرار بشكل عمودي */
+    gap: 10px; /* تباعد بين الأزرار */
+  }
+
+  .trail-cards {
+    gap: 20px; /* زيادة التباعد بين الكروت */
+  }
+
+  .trail-card {
+    width: 100%; /* جعل الكرت يأخذ عرض الشاشة بالكامل */
+    height: auto; /* ضبط الارتفاع تلقائيًا */
+  }
+
+  .plans {
+    flex-direction: column; /* ترتيب الباقات عمودي */
+  }
+
+  .plan {
+    width: 90%; /* تقليل عرض كل باقة */
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr; /* جعل الفوتر عمودي */
+    text-align: center;
+  }
+
+  .footer-logo,
+  .footer-links,
+  .social-media,
+  .newsletter {
+    align-items: center; /* توسيط المحتوى */
+  }
+}
+/* Responsive Header for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 10px 20px; /* تقليل التباعد */
+  }
+
+  .navbar {
+    flex-direction: column; /* ترتيب العناصر بشكل عمودي */
+    align-items: center; /* توسيط العناصر */
+    gap: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column; /* عرض الروابط تحت بعض */
+    text-align: center;
+    gap: 10px;
+  }
+
+  .auth-buttons {
+    flex-direction: column; /* ترتيب الأزرار عمودي */
+    gap: 10px;
+  }
+}
